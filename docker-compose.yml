@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gui:
+    image: gui:develop
+    build:
+      context: ./dockerfiles
+      dockerfile: Dockerfile-gui
+    volumes:
+        - ./gui:/gui
+    command: 'bash'
+    container_name: 'gui-environment'
+    tty: true
